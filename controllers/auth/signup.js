@@ -26,7 +26,6 @@ const signup = async (req, res) => {
     subject: "confirm registration",
     html: `<a target="_blank" href="http://localhost:3000/api/users/verify/${verificationToken}">Press to confirm email</a>`,
   };
-
   res.status(201).json({
     user: {
       email: result.email,
